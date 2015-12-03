@@ -7,7 +7,7 @@ import rnn
 
 
 class ChainClassifier(object):
-    def __init__(self, word_model, class_num=2, unit_num=100, learn_rate=0.05):
+    def __init__(self, word_model, class_num=2, unit_num=100, learn_rate=0.005):
         self.word_model = word_model
         self.class_num = class_num
         self.unit_num = unit_num
