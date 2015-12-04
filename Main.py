@@ -16,18 +16,18 @@ def chain_test(word_model, pos_data, neg_data):
     sess.run(tf.initialize_all_variables())
 
     c = 0
-    for t in range(10):
+    for t in range(20):
 
-        for i in range(30):
+        for i in range(200):
             print t, i
             classifier.train_sample(pos_data[i], 0, sess)
             classifier.train_sample(neg_data[i], 1, sess)
             c += 1
-            if c % 10 == 0:
+            if c % 50 == 0:
                 print 'round:', t, 'instance:', i
 
-                bIdx = 28
-                eIdx = 32
+                bIdx = 4000
+                eIdx = 4020
                 tp = fp = tn = fn = 0.0
                 for i in range(bIdx, eIdx):
                     res = classifier.test_sample(pos_data[i], sess)

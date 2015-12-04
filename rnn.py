@@ -26,4 +26,4 @@ def sequence_rnn(rnn_cell, word_list, word_model, first_train=True):
             states.append(state)
             outputs.append(output)
 
-    return outputs[-1], feed_dict
+    return states[-1], feed_dict
