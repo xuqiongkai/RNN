@@ -10,7 +10,6 @@ import tensorflow as tf
 
 from tensorflow.models.rnn import linear
 
-
 class RNNCell(object):
   """Abstract object representing an RNN cell.
 
